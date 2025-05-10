@@ -7,12 +7,12 @@ int main() {
     // PRIMEIRA CARTA
     char estado1[50], codigoCarta1[10], nomeCidade1[50];
     int populacao1, numPontosTuristicos1;
-    float area1, pib1;
+    float area1, pib1, densidadePop1, pibPer1;
 
     // SEGUNDA CARTA
     char estado2[50], codigoCarta2[10], nomeCidade2[50];
     int populacao2, numPontosTuristicos2;
-    float area2, pib2;
+    float area2, pib2, densidadePop2, pibPer2;
 
     // CADASTRO PRIMEIRA CARTA
    printf("\n====== Cadastro da Primeira Carta ======\n");
@@ -37,6 +37,9 @@ int main() {
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &numPontosTuristicos1);
+
+    densidadePop2 = (float)(populacao1 / area1);
+    pibPer2 = (float)(pib1 / populacao1);
 
     // Limpa o buffer do teclado
     getchar();
@@ -65,6 +68,9 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &numPontosTuristicos2);
 
+    densidadePop1 = (float)(populacao2 / area2);
+    pibPer1 = (float)(pib2 / populacao2);
+
     // Exibição dos Dados das Cartas:
     printf("\n------- Carta 1 -------\n");
     printf("Estado                     : %s\n", estado1);
@@ -74,6 +80,9 @@ int main() {
     printf("Área                       : %.2f km²\n", area1);
     printf("PIB                        : R$ %.2f \n", pib1);
     printf("Número de Pontos Turísticos: %d\n", numPontosTuristicos1);
+    printf("Densidade Populacional     : %.2f hab/km²\n", densidadePop1);
+    printf("PIB per Capita             : R$ %.2f\n", pibPer1);
+    
 
     printf("\n-------Carta 2 -------\n");
     printf("Estado                     : %s\n", estado2);
@@ -83,6 +92,8 @@ int main() {
     printf("Área                       : %.2f km²\n", area2);
     printf("PIB                        : R$ %.2f \n", pib2);
     printf("Número de Pontos Turísticos: %d\n", numPontosTuristicos2);
+    printf("Densidade Populacional     : %.2f hab/km²\n", densidadePop2);
+    printf("PIB per Capita             : R$ %.2f\n", pibPer2);
 
     return 0;
 }
